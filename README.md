@@ -6,32 +6,33 @@ Unicode, and multibyte character support.
 
  
 
-This plugin: -
+This plugin:
 
-🧠 Converts all core WordPress tables to use `utf8mb4_unicode_ci` -
+\- Converts all core WordPress tables to use `utf8mb4_unicode_ci`
 
-🛠 Fixes invalid `DATETIME` defaults in `wp_posts` -
+\- Fixes invalid `DATETIME` defaults in `wp_posts`
 
-💾 Automatically creates a full `.sql` backup in `wp-content/backups/` -
+\- Automatically creates a full `.sql` backup in `wp-content/backups/`
 
-🧹 Disables itself after running once - ✅ Safe to delete after use
+\- Disables itself after running once - **Safe and recommended  to delete after
+use**
 
  
 
-🚀 Why Use This?
----------------
+Why Use This?
+-------------
 
 Modern WordPress features (like emojis, special characters, and full
 multilingual support) require `utf8mb4` charset.
 
 Older sites using `utf8` (actually `utf8mb3`) may run into: - Emoji save
 failures 😭 - Database errors on certain characters - Incompatibility with block
-editor plugins like Code Block Pro
+editor plugins like Code Block Pro when saving to the post database
 
  
 
-🛠 What It Does
---------------
+What It Does
+------------
 
 1.  **Backup** your database using `mysqldump` (if available)
 
@@ -51,8 +52,8 @@ editor plugins like Code Block Pro
 
  
 
-📂 Installation
---------------
+Installation
+------------
 
 1.  Drop the plugin into your WordPress install:
 
@@ -74,8 +75,8 @@ wp-db-modernizer/
 
  
 
-🧼 Cleanup
----------
+Cleanup
+-------
 
 -   Once the operation completes, you’ll see a success notice.
 
@@ -85,8 +86,8 @@ wp-db-modernizer/
 
  
 
-📦 Backup Location
------------------
+Backup Location
+---------------
 
 Backups are saved as:
 
@@ -96,8 +97,8 @@ wp-content/backups/db-backup-YYYY-MM-DD_HH-MM-SS.sql
 
  
 
-🛑 Requirements
---------------
+Requirements
+------------
 
 -   PHP `exec()` must be enabled (for backups via `mysqldump`)
 
@@ -107,19 +108,11 @@ wp-content/backups/db-backup-YYYY-MM-DD_HH-MM-SS.sql
 
  
 
-⚠️ Disclaimer
-------------
+Disclaimer
+----------
 
 Use at your own risk. Always back up your site before running database-altering
 scripts.
-
- 
-
-💬 Support / Customization
--------------------------
-
-Feel free to open an issue or modify the plugin to support: - Custom table
-prefixes - Multisite networks - Additional charset/collation preferences
 
  
 
